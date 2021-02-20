@@ -17,7 +17,7 @@ server <- function(input, output, session) {
   output$branches <- renderText({
     safe_branch <- safely(gert::git_branch)
     branch <- safe_branch()
-    c(branch$result, branch$error)
+    branch$result
   })
 }
 
