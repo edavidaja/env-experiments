@@ -1,5 +1,6 @@
 library(shiny)
 library(dotenv)
+library(purrr)
 
 ui <- basicPage(
   wellPanel(
@@ -10,10 +11,13 @@ ui <- basicPage(
 
 server <- function(input, output, session) {
   output$vars <- renderText({
-    Sys.getenv("FIRST_VARIABLE")
+    Sys.getenv("SECOND_VARIABLE")
   })
+  
   output$branches <- renderText({
-    gert::git_branch()
+    safe_branch <- safely(gert::git_branch)
+    branch <- safe_branch()
+    c(branch$result, branch$error)
   })
 }
 
