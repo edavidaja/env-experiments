@@ -83,6 +83,34 @@
         "Built": "R 4.0.2; x86_64-apple-darwin17.0; 2021-01-16 11:23:26 UTC; unix"
       }
     },
+    "askpass": {
+      "Source": "CRAN",
+      "Repository": "https://packagemanager.rstudio.com/all/latest",
+      "description": {
+        "Package": "askpass",
+        "Type": "Package",
+        "Title": "Safe Password Entry for R, Git, and SSH",
+        "Version": "1.1",
+        "Authors@R": "person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), \n    email = \"jeroen@berkeley.edu\", comment = c(ORCID = \"0000-0002-4035-0289\"))",
+        "Description": "Cross-platform utilities for prompting the user for credentials or a \n    passphrase, for example to authenticate with a server or read a protected key.\n    Includes native programs for MacOS and Windows, hence no 'tcltk' is required. \n    Password entry can be invoked in two different ways: directly from R via the \n    askpass() function, or indirectly as password-entry back-end for 'ssh-agent' \n    or 'git-credential' via the SSH_ASKPASS and GIT_ASKPASS environment variables.\n    Thereby the user can be prompted for credentials or a passphrase if needed \n    when R calls out to git or ssh.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/jeroen/askpass#readme",
+        "BugReports": "https://github.com/jeroen/askpass/issues",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "Imports": "sys (>= 2.1)",
+        "RoxygenNote": "6.1.1",
+        "Suggests": "testthat",
+        "Language": "en-US",
+        "NeedsCompilation": "yes",
+        "Packaged": "2019-01-13 12:08:17 UTC; jeroen",
+        "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>)",
+        "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
+        "Repository": "RSPM",
+        "Date/Publication": "2019-01-13 12:50:03 UTC",
+        "Built": "R 4.0.3; x86_64-apple-darwin17.0; 2020-12-03 14:40:28 UTC; unix"
+      }
+    },
     "base64enc": {
       "Source": "CRAN",
       "Repository": "https://packagemanager.rstudio.com/all/latest",
@@ -209,6 +237,65 @@
         "Repository": "CRAN",
         "Date/Publication": "2021-02-08 19:50:02 UTC",
         "Built": "R 4.0.2; ; 2021-02-09 11:22:18 UTC; unix"
+      }
+    },
+    "credentials": {
+      "Source": "CRAN",
+      "Repository": "https://packagemanager.rstudio.com/all/latest",
+      "description": {
+        "Package": "credentials",
+        "Type": "Package",
+        "Title": "Tools for Managing SSH and Git Credentials",
+        "Version": "1.3.0",
+        "Authors@R": "person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), \n    email = \"jeroen@berkeley.edu\", comment = c(ORCID = \"0000-0002-4035-0289\"))",
+        "Description": "Setup and retrieve HTTPS and SSH credentials for use with 'git' and \n    other services. For HTTPS remotes the package interfaces the 'git-credential' \n    utility which 'git' uses to store HTTP usernames and passwords. For SSH \n    remotes we provide convenient functions to find or generate appropriate SSH \n    keys. The package both helps the user to setup a local git installation, and\n    also provides a back-end for git/ssh client libraries to authenticate with \n    existing user credentials.",
+        "License": "MIT + file LICENSE",
+        "SystemRequirements": "git (optional)",
+        "Encoding": "UTF-8",
+        "Imports": "openssl (>= 1.3), sys (>= 2.1), curl, jsonlite, askpass",
+        "Suggests": "testthat, knitr, rmarkdown",
+        "RoxygenNote": "7.1.1",
+        "VignetteBuilder": "knitr",
+        "Language": "en-US",
+        "URL": "https://docs.ropensci.org/credentials (website)\nhttps://github.com/r-lib/credentials",
+        "BugReports": "https://github.com/r-lib/credentials/issues",
+        "NeedsCompilation": "no",
+        "Packaged": "2020-07-21 08:38:12 UTC; jeroen",
+        "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>)",
+        "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
+        "Repository": "CRAN",
+        "Date/Publication": "2020-07-21 09:10:06 UTC",
+        "Built": "R 4.0.2; ; 2020-07-23 04:08:02 UTC; unix"
+      }
+    },
+    "curl": {
+      "Source": "CRAN",
+      "Repository": "https://packagemanager.rstudio.com/all/latest",
+      "description": {
+        "Package": "curl",
+        "Type": "Package",
+        "Title": "A Modern and Flexible Web Client for R",
+        "Version": "4.3",
+        "Authors@R": "c(\n    person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroen@berkeley.edu\",\n      comment = c(ORCID = \"0000-0002-4035-0289\")),\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = \"ctb\"),\n    person(\"RStudio\", role = \"cph\")\n    )",
+        "Description": "The curl() and curl_download() functions provide highly\n    configurable drop-in replacements for base url() and download.file() with\n    better performance, support for encryption (https, ftps), gzip compression,\n    authentication, and other 'libcurl' goodies. The core of the package implements a\n    framework for performing fully customized requests where data can be processed\n    either in memory, on disk, or streaming via the callback or connection\n    interfaces. Some knowledge of 'libcurl' is recommended; for a more-user-friendly\n    web client see the 'httr' package which builds on this package with http\n    specific tools and logic.",
+        "License": "MIT + file LICENSE",
+        "SystemRequirements": "libcurl: libcurl-devel (rpm) or\nlibcurl4-openssl-dev (deb).",
+        "URL": "https://jeroen.cran.dev/curl (docs)\nhttps://github.com/jeroen/curl#readme (devel)\nhttps://curl.haxx.se/libcurl/ (upstream)",
+        "BugReports": "https://github.com/jeroen/curl/issues",
+        "Suggests": "spelling, testthat (>= 1.0.0), knitr, jsonlite, rmarkdown,\nmagrittr, httpuv (>= 1.4.4), webutils",
+        "VignetteBuilder": "knitr",
+        "Depends": "R (>= 3.0.0)",
+        "LazyData": "true",
+        "RoxygenNote": "7.0.1",
+        "Encoding": "UTF-8",
+        "Language": "en-US",
+        "NeedsCompilation": "yes",
+        "Packaged": "2019-12-02 12:33:03 UTC; jeroen",
+        "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  Hadley Wickham [ctb],\n  RStudio [cph]",
+        "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
+        "Repository": "RSPM",
+        "Date/Publication": "2019-12-02 14:00:03 UTC",
+        "Built": "R 4.0.3; x86_64-apple-darwin17.0; 2020-12-03 14:40:22 UTC; unix"
       }
     },
     "digest": {
@@ -343,6 +430,35 @@
         "Repository": "RSPM",
         "Date/Publication": "2020-07-31 21:30:03 UTC",
         "Built": "R 4.0.3; x86_64-apple-darwin17.0; 2020-12-03 14:41:12 UTC; unix"
+      }
+    },
+    "gert": {
+      "Source": "CRAN",
+      "Repository": "https://packagemanager.rstudio.com/all/latest",
+      "description": {
+        "Type": "Package",
+        "Package": "gert",
+        "Title": "Simple Git Client for R",
+        "Version": "1.2.0",
+        "Authors@R": "c(\n    person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroen@berkeley.edu\",\n      comment = c(ORCID = \"0000-0002-4035-0289\")),\n    person(\"Jennifer\", \"Bryan\", role = \"ctb\", email = \"jenny@rstudio.com\",\n      comment = c(ORCID = \"0000-0002-6983-2759\")))",
+        "Description": "Simple git client for R based on 'libgit2' with support for SSH and \n    HTTPS remotes. All functions in 'gert' use basic R data types (such as vectors\n    and data-frames) for their arguments and return values. User credentials are\n    shared with command line 'git' through the git-credential store and ssh keys\n    stored on disk or ssh-agent.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://docs.ropensci.org/gert/ (website),\nhttps://github.com/r-lib/gert (devel), https://libgit2.org\n(upstream)",
+        "BugReports": "https://github.com/r-lib/gert/issues",
+        "Imports": "askpass, credentials (>= 1.2.1), openssl (>= 1.4.1),\nrstudioapi (>= 0.11), sys, zip (>= 2.1.0)",
+        "Suggests": "spelling, knitr, rmarkdown, testthat",
+        "VignetteBuilder": "knitr",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.1.1",
+        "SystemRequirements": "libgit2 (>= 0.26): libgit2-devel (rpm) or\nlibgit2-dev (deb)",
+        "Language": "en-US",
+        "NeedsCompilation": "yes",
+        "Packaged": "2021-02-12 21:54:22 UTC; jeroen",
+        "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  Jennifer Bryan [ctb] (<https://orcid.org/0000-0002-6983-2759>)",
+        "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
+        "Repository": "RSPM",
+        "Date/Publication": "2021-02-14 22:40:03 UTC",
+        "Built": "R 4.0.3; x86_64-apple-darwin17.0; 2021-02-20 21:27:25 UTC; unix"
       }
     },
     "glue": {
@@ -593,6 +709,34 @@
         "Built": "R 4.0.2; x86_64-apple-darwin17.0; 2021-02-14 11:22:15 UTC; unix"
       }
     },
+    "openssl": {
+      "Source": "CRAN",
+      "Repository": "https://packagemanager.rstudio.com/all/latest",
+      "description": {
+        "Package": "openssl",
+        "Type": "Package",
+        "Title": "Toolkit for Encryption, Signatures and Certificates Based on\nOpenSSL",
+        "Version": "1.4.3",
+        "Authors@R": "c(person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroen@berkeley.edu\",\n    comment = c(ORCID = \"0000-0002-4035-0289\")),\n    person(\"Oliver\", \"Keyes\", role = \"ctb\"))",
+        "Description": "Bindings to OpenSSL libssl and libcrypto, plus custom SSH key parsers.\n    Supports RSA, DSA and EC curves P-256, P-384, P-521, and curve25519. Cryptographic\n    signatures can either be created and verified manually or via x509 certificates. \n    AES can be used in cbc, ctr or gcm mode for symmetric encryption; RSA for asymmetric\n    (public key) encryption or EC for Diffie Hellman. High-level envelope functions \n    combine RSA and AES for encrypting arbitrary sized data. Other utilities include key\n    generators, hash functions (md5, sha1, sha256, etc), base64 encoder, a secure random\n    number generator, and 'bignum' math methods for manually performing crypto \n    calculations on large multibyte integers.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/jeroen/openssl#readme",
+        "BugReports": "https://github.com/jeroen/openssl/issues",
+        "SystemRequirements": "OpenSSL >= 1.0.1",
+        "VignetteBuilder": "knitr",
+        "Imports": "askpass",
+        "Suggests": "testthat (>= 2.1.0), digest, knitr, rmarkdown, jsonlite,\njose, sodium",
+        "RoxygenNote": "7.1.1",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "yes",
+        "Packaged": "2020-09-18 10:34:40 UTC; jeroen",
+        "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  Oliver Keyes [ctb]",
+        "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
+        "Repository": "RSPM",
+        "Date/Publication": "2020-09-18 12:00:02 UTC",
+        "Built": "R 4.0.3; x86_64-apple-darwin17.0; 2020-12-03 14:40:32 UTC; unix"
+      }
+    },
     "promises": {
       "Source": "CRAN",
       "Repository": "https://packagemanager.rstudio.com/all/latest",
@@ -682,6 +826,31 @@
         "Built": "R 4.0.2; x86_64-apple-darwin17.0; 2020-12-31 11:23:09 UTC; unix"
       }
     },
+    "rstudioapi": {
+      "Source": "CRAN",
+      "Repository": "https://packagemanager.rstudio.com/all/latest",
+      "description": {
+        "Package": "rstudioapi",
+        "Title": "Safely Access the RStudio API",
+        "Description": "Access the RStudio API (if available) and provide informative error\n    messages when it's not.",
+        "Version": "0.13",
+        "Authors@R": "c(\n    person(\"Kevin\", \"Ushey\", role = c(\"aut\", \"cre\"), email = \"kevin@rstudio.com\"),\n    person(\"JJ\", \"Allaire\", role = c(\"aut\"), email = \"jj@rstudio.com\"),\n    person(\"Hadley\", \"Wickham\", role = c(\"aut\"), email = \"hadley@rstudio.com\"),\n    person(\"Gary\", \"Ritchie\", role = c(\"aut\"), email = \"gary@rstudio.com\"),\n    person(family = \"RStudio\", role = \"cph\")\n    )",
+        "Maintainer": "Kevin Ushey <kevin@rstudio.com>",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/rstudio/rstudioapi",
+        "BugReports": "https://github.com/rstudio/rstudioapi/issues",
+        "RoxygenNote": "7.1.1",
+        "Suggests": "testthat, knitr, rmarkdown, clipr",
+        "VignetteBuilder": "knitr",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "no",
+        "Packaged": "2020-11-11 23:34:30 UTC; kevinushey",
+        "Author": "Kevin Ushey [aut, cre],\n  JJ Allaire [aut],\n  Hadley Wickham [aut],\n  Gary Ritchie [aut],\n  RStudio [cph]",
+        "Repository": "RSPM",
+        "Date/Publication": "2020-11-12 21:50:02 UTC",
+        "Built": "R 4.0.3; ; 2020-12-03 14:30:44 UTC; unix"
+      }
+    },
     "sass": {
       "Source": "CRAN",
       "Repository": "https://packagemanager.rstudio.com/all/latest",
@@ -765,6 +934,33 @@
         "Built": "R 4.0.3; x86_64-apple-darwin17.0; 2020-12-05 15:58:19 UTC; unix"
       }
     },
+    "sys": {
+      "Source": "CRAN",
+      "Repository": "https://packagemanager.rstudio.com/all/latest",
+      "description": {
+        "Package": "sys",
+        "Type": "Package",
+        "Title": "Powerful and Reliable Tools for Running System Commands in R",
+        "Version": "3.4",
+        "Authors@R": "c(person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), \n      email = \"jeroen@berkeley.edu\", comment = c(ORCID = \"0000-0002-4035-0289\")),\n    person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", role = \"ctb\"))",
+        "Description": "Drop-in replacements for the base system2() function with fine control\n    and consistent behavior across platforms. Supports clean interruption, timeout, \n    background tasks, and streaming STDIN / STDOUT / STDERR over binary or text \n    connections. Arguments on Windows automatically get encoded and quoted to work \n    on different locales.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/jeroen/sys",
+        "BugReports": "https://github.com/jeroen/sys/issues",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "RoxygenNote": "7.1.1",
+        "Suggests": "unix (>= 1.4), spelling, testthat",
+        "Language": "en-US",
+        "NeedsCompilation": "yes",
+        "Packaged": "2020-07-22 19:23:54 UTC; jeroen",
+        "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  Gábor Csárdi [ctb]",
+        "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
+        "Repository": "RSPM",
+        "Date/Publication": "2020-07-23 04:30:02 UTC",
+        "Built": "R 4.0.3; x86_64-apple-darwin17.0; 2020-12-03 14:40:26 UTC; unix"
+      }
+    },
     "withr": {
       "Source": "CRAN",
       "Repository": "https://packagemanager.rstudio.com/all/latest",
@@ -819,6 +1015,31 @@
         "Encoding": "UTF-8",
         "Built": "R 4.0.3; ; 2020-12-05 15:58:17 UTC; unix"
       }
+    },
+    "zip": {
+      "Source": "CRAN",
+      "Repository": "https://packagemanager.rstudio.com/all/latest",
+      "description": {
+        "Package": "zip",
+        "Title": "Cross-Platform 'zip' Compression",
+        "Version": "2.1.1",
+        "Author": "Gábor Csárdi, Kuba Podgórski, Rich Geldreich",
+        "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
+        "Description": "Cross-Platform 'zip' Compression Library. A replacement\n    for the 'zip' function, that does not require any additional\n    external tools on any platform.",
+        "License": "CC0",
+        "LazyData": "true",
+        "URL": "https://github.com/r-lib/zip#readme",
+        "BugReports": "https://github.com/r-lib/zip/issues",
+        "RoxygenNote": "7.1.1",
+        "Config/testthat/edition": "3",
+        "Suggests": "covr, processx, R6, testthat, withr",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "yes",
+        "Packaged": "2020-08-26 09:19:33 UTC; gaborcsardi",
+        "Repository": "CRAN",
+        "Date/Publication": "2020-08-27 16:00:02 UTC",
+        "Built": "R 4.0.2; x86_64-apple-darwin17.0; 2020-08-28 10:21:53 UTC; unix"
+      }
     }
   },
   "files": {
@@ -826,7 +1047,10 @@
       "checksum": "3b9e56f4c23541a010525c487b2c3f25"
     },
     "app.R": {
-      "checksum": "9aae7e204e71b5ee7bf7e5e7c06656ad"
+      "checksum": "22d284eeffdb22e83179f9ec06f1c2cc"
+    },
+    "packrat/desc/askpass": {
+      "checksum": "87615511d5a004f25349da6c0449c93f"
     },
     "packrat/desc/base64enc": {
       "checksum": "69eabafefb5aba2913f815f33bc225e6"
@@ -846,6 +1070,12 @@
     "packrat/desc/crayon": {
       "checksum": "c4cd447b7b32f451e113ca97d8bfeb97"
     },
+    "packrat/desc/credentials": {
+      "checksum": "046dffba109c3a1c24811fcd0765037b"
+    },
+    "packrat/desc/curl": {
+      "checksum": "5e24ca29ca6a22c4d7dee2c50b2076fb"
+    },
     "packrat/desc/digest": {
       "checksum": "7cfa512fcdcf926774b004f74e429282"
     },
@@ -860,6 +1090,9 @@
     },
     "packrat/desc/fs": {
       "checksum": "9b659aec4e31d0ec07f6235fcbbe37b6"
+    },
+    "packrat/desc/gert": {
+      "checksum": "f7a1eeb072362bb7a98a9a1e52f8a9c8"
     },
     "packrat/desc/glue": {
       "checksum": "3666af25d9d6bf383639789d105ad891"
@@ -888,6 +1121,9 @@
     "packrat/desc/mime": {
       "checksum": "336d8e48047a369a46a82381e86f7a8e"
     },
+    "packrat/desc/openssl": {
+      "checksum": "0158aa59934de17da81cb13202fe66a2"
+    },
     "packrat/desc/promises": {
       "checksum": "4a906a1e6fd101b7a86e637a29423f9b"
     },
@@ -903,6 +1139,9 @@
     "packrat/desc/rlang": {
       "checksum": "c2aa10726f53527a9202aa8c6acb4e9b"
     },
+    "packrat/desc/rstudioapi": {
+      "checksum": "2051ff6fab0534e706b026500a09b6c7"
+    },
     "packrat/desc/sass": {
       "checksum": "f19ed69ac6df0cf73daa4ff2ef382800"
     },
@@ -912,14 +1151,20 @@
     "packrat/desc/sourcetools": {
       "checksum": "33175870d36de729911e6dd9649ad6fa"
     },
+    "packrat/desc/sys": {
+      "checksum": "b1c250e3278e175836ccb6046a04bbee"
+    },
     "packrat/desc/withr": {
       "checksum": "5f6102075d984fd3534d64f3a9a8b8bb"
     },
     "packrat/desc/xtable": {
       "checksum": "3cec0a71e6440379b9c2d4a3be11be80"
     },
+    "packrat/desc/zip": {
+      "checksum": "a89320d3de68c6d1058cef61d3cac73f"
+    },
     "packrat/packrat.lock": {
-      "checksum": "57e7334c4773acd536620f86062a1795"
+      "checksum": "1dfb27d6b3d8e58a5ba36c9f98d73bfa"
     }
   },
   "users": null
