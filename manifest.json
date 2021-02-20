@@ -767,6 +767,34 @@
         "Built": "R 4.0.2; x86_64-apple-darwin17.0; 2021-02-12 11:41:27 UTC; unix"
       }
     },
+    "purrr": {
+      "Source": "CRAN",
+      "Repository": "https://packagemanager.rstudio.com/all/latest",
+      "description": {
+        "Package": "purrr",
+        "Title": "Functional Programming Tools",
+        "Version": "0.3.4",
+        "Authors@R": "\n    c(person(given = \"Lionel\",\n             family = \"Henry\",\n             role = c(\"aut\", \"cre\"),\n             email = \"lionel@rstudio.com\"),\n      person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = \"aut\",\n             email = \"hadley@rstudio.com\"),\n      person(given = \"RStudio\",\n             role = c(\"cph\", \"fnd\")))",
+        "Description": "A complete and consistent functional programming\n    toolkit for R.",
+        "License": "GPL-3 | file LICENSE",
+        "URL": "http://purrr.tidyverse.org, https://github.com/tidyverse/purrr",
+        "BugReports": "https://github.com/tidyverse/purrr/issues",
+        "Depends": "R (>= 3.2)",
+        "Imports": "magrittr (>= 1.5), rlang (>= 0.3.1)",
+        "Suggests": "covr, crayon, dplyr (>= 0.7.8), knitr, rmarkdown, testthat,\ntibble, tidyselect",
+        "VignetteBuilder": "knitr",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "RoxygenNote": "7.1.0",
+        "NeedsCompilation": "yes",
+        "Packaged": "2020-04-16 21:54:48 UTC; hadley",
+        "Author": "Lionel Henry [aut, cre],\n  Hadley Wickham [aut],\n  RStudio [cph, fnd]",
+        "Maintainer": "Lionel Henry <lionel@rstudio.com>",
+        "Repository": "RSPM",
+        "Date/Publication": "2020-04-17 12:10:07 UTC",
+        "Built": "R 4.0.3; x86_64-apple-darwin17.0; 2020-12-03 14:25:49 UTC; unix"
+      }
+    },
     "rappdirs": {
       "Source": "CRAN",
       "Repository": "https://packagemanager.rstudio.com/all/latest",
@@ -1047,7 +1075,7 @@
       "checksum": "3b9e56f4c23541a010525c487b2c3f25"
     },
     "app.R": {
-      "checksum": "22d284eeffdb22e83179f9ec06f1c2cc"
+      "checksum": "b41cecefff6f9405f23c93e6f97bb9f9"
     },
     "packrat/desc/askpass": {
       "checksum": "87615511d5a004f25349da6c0449c93f"
@@ -1127,6 +1155,9 @@
     "packrat/desc/promises": {
       "checksum": "4a906a1e6fd101b7a86e637a29423f9b"
     },
+    "packrat/desc/purrr": {
+      "checksum": "0934a2457470477517d0313ea757f954"
+    },
     "packrat/desc/R6": {
       "checksum": "1fb69337d113042428bd8c734b4838b6"
     },
@@ -1164,7 +1195,7 @@
       "checksum": "a89320d3de68c6d1058cef61d3cac73f"
     },
     "packrat/packrat.lock": {
-      "checksum": "1dfb27d6b3d8e58a5ba36c9f98d73bfa"
+      "checksum": "2588164552f62f1c1c356a04f96c32b7"
     }
   },
   "users": null
